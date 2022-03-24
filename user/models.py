@@ -33,6 +33,7 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password=password, **extra_fields)
 
 
+# Needs to be rewritten
 class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length = 56)
     last_name = models.CharField(max_length = 56)
